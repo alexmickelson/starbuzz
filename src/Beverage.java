@@ -3,14 +3,16 @@ import java.awt.*;
 
 public abstract class Beverage {
     String description = "Unknown Beverage";
-    JFrame frame;
+    public JFrame frame;
 
     public void frame(){
         frame = new JFrame();
-        TextField name = new TextField();
-        JPanel panel = new JPanel();
         frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
+
+        TextField name = new TextField(this.description);
+        JPanel panel = new JPanel();
         panel.add(name);
+
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, description.length()*10);

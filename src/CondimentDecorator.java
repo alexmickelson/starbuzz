@@ -8,11 +8,9 @@ public abstract class CondimentDecorator extends Beverage {
     public void frame() {
         super.frame();
         JPanel panel = new JPanel();
-        TextField name = new TextField(getDescription());
+        TextField name = new TextField(this.getDescription());
         panel.add(name);
         frame.add(panel);
-
-
 
     }
 }
