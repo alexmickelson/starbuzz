@@ -1,15 +1,15 @@
+import javax.swing.JFrame;
+
 public class Mocha extends CondimentDecorator {
 
-    Beverage beverage;
 
     public Mocha(Beverage beverage) {
-        this.beverage = beverage;
-        description = getDescription() + " Mocha";
+        super(beverage);
     }
 
     @Override
     public String getDescription() {
-        return beverage.getDescription();
+        return beverage.getDescription() + " Mocha";
     }
 
     @Override
@@ -19,6 +19,13 @@ public class Mocha extends CondimentDecorator {
 
     @Override
     public void print() {
-        System.out.println(description + " $" + cost());
+        System.out.println(getDescription() + " $" + cost());
+    }
+    @Override
+    public void frame(){
+        super.frame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, description.length()*10);
+        frame.setVisible(true);
     }
 }

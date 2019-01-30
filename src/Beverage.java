@@ -3,7 +3,12 @@ import java.awt.*;
 
 public abstract class Beverage {
     String description = "Unknown Beverage";
-    public JFrame frame;
+    JFrame frame;
+
+    public Beverage(){
+        frame = new JFrame();
+        
+    }
 
     public void frame(){
         frame = new JFrame();
@@ -14,9 +19,6 @@ public abstract class Beverage {
         panel.add(name);
 
         frame.add(panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, description.length()*10);
-        frame.setVisible(true);
     }
 
     public String getDescription() {

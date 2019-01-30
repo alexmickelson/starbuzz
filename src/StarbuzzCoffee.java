@@ -4,7 +4,11 @@ public class StarbuzzCoffee {
 
         beverage.print();
 
+        beverage = new Mocha(beverage);
+        beverage = new Mocha(beverage);
 
+        beverage.print();
+        beverage.frame();
 
 
     }

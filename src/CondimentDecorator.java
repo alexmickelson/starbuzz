@@ -3,6 +3,12 @@ import java.awt.*;
 
 public abstract class CondimentDecorator extends Beverage {
     public abstract String getDescription();
+    Beverage beverage;
+
+    public CondimentDecorator(Beverage beverage){
+        super();
+        this.beverage = beverage;
+    }
 
     @Override
     public void frame() {
@@ -13,4 +19,5 @@ public abstract class CondimentDecorator extends Beverage {
         frame.add(panel);
 
     }
+
 }
